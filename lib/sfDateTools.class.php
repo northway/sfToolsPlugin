@@ -10,14 +10,23 @@
 class sfDateTools {
   
   /**
-   * Creates a MD5 string with the 
-   * given string and actual datetime
+   * Calculates the time difference between two datetime
    * 
-   * @param string $str
-   * @return string
+   * @param DateTime $firstTime
+   * @param DateTime $lastTime
+   * @return int
    */
-  public static function PrefixMD5DateTimeWithString($str) {
-    return md5(date("Y-m-d H:i:s") . $str);
+  public static function TimeDiff($firstTime, $lastTime) {
+
+    // convert to unix timestamps
+    $firstTime = strtotime($firstTime);
+    $lastTime = strtotime($lastTime);
+
+    // perform subtraction to get the difference (in seconds) between times
+    $timeDiff = $lastTime - $firstTime;
+
+    // return the difference
+    return $timeDiff;
   }
   
 }

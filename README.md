@@ -21,3 +21,11 @@ You need to add this line to ProjectConfiguration.class.php:
 Then a Symfony cache clear:
 
 		$ php symfony cc
+
+### Available tools:
+
+    * TimeDiff
+    * Slugify
+    * PrefixMD5DateTimeWithString
+    * RemoveFileExtension
+    * AddMoreYears

@@ -22,7 +22,7 @@ class sfWidgetTools {
    * 
    * @return array Years
    */
-  public static function getYears() {
+  public static function AddMoreYears() {
     $yearFrom = date('Y') - 10;
     $yearTo = date('Y') + 11;
 
